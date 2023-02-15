@@ -7,6 +7,13 @@ const btn = document.getElementById('btn-submit');
 const pResult = document.querySelector('#result');
 const dblank = document.getElementById('blank'); // con getElementById no es necesario discriminar si es una clase . o un id #
 const imageDivBlank = document.createElement('img');
+const form = document.querySelector("#form__database");
+const inputForm = document.querySelector("#inputForm");
+const inputName = document.querySelector('#inputForm1');
+const inputNumber = document.querySelector('#inputForm2');
+const inputEmail = document.querySelector('#inputForm3');
+const pPrintForm = document.querySelector('.printForm');
+
 
 imageDivBlank.style.cssText = 'width: 300px; margin-top: 20px;';//manipulando css en JS
 
@@ -28,7 +35,7 @@ console.log({
     idparrafo3,
     input2
 });
-
+//resultado partido
 function resultadoPartido () {
     let resultEquipo1 = parseInt(input1.value);
     let resultEquipo2 = parseInt(input2.value);
@@ -37,8 +44,10 @@ function resultadoPartido () {
         pResult.innerText = `Es un Empate`
     } else if (resultEquipo1 > resultEquipo2){
         pResult.innerText = `El ganador es el equipo 1 con ${resultEquipo1} puntos`
-    } else {
+    } else if (resultEquipo1 < resultEquipo2){
         pResult.innerText = `El ganador es el equipo 2 con ${resultEquipo2} puntos`
+    } else {
+        pResult.innerText = `Escribe cual va a ser el resultado para ambos equipos por favor`
     }
 }
 
@@ -50,5 +59,21 @@ console.log(imageDivBlank);
 
 dblank.append(imageDivBlank);
 
+//events form
 
+form.addEventListener('submit', printFormulario)
+
+function printFormulario (event) {
+    event.preventDefault();
+    let name = inputName.value;
+    let number = +inputNumber.value;
+    let mail = inputEmail.value;
+
+    pPrintForm.innerHTML = `ya casi`/* `
+    Verifica la informacion:
+    Nombre completo: ${name}
+    Numero de telerono: ${number}
+    Correo electronico: ${mail}
+    `; */
+}
 

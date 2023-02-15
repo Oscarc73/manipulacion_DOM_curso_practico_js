@@ -1,0 +1,8 @@
+#form__database {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-submit-form {
+    width: 20%;
+}

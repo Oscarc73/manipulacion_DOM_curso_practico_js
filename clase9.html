@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulacion del DOM basica</title>
 
+    <link rel="stylesheet" href="/style.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
     <h1>Manipulando el DOM</h1>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deserunt? Consequuntur, earum? Voluptatibus, distinctio possimus. Dolores, dolor, doloremque quod sunt assumenda eius soluta quasi dignissimos asperiores eligendi voluptas quisquam. Molestias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deserunt? Consequuntur, earum?
+        Voluptatibus, distinctio possimus. Dolores, dolor, doloremque quod sunt assumenda eius soluta quasi dignissimos
+        asperiores eligendi voluptas quisquam. Molestias.</p>
     <p class="parrafo2"> Este parrafo tiene una clase</p>
     <p id="parrafo3"> este parrafo tiene un id</p>
 
     <p>Predice el resultado del partido:</p>
-    <input id="inputCal1" type="text" value="" name="input1" placeholder="Resultado equipo 1"
-    />
-    <input id="inputCal2" type="text" value="" name="input1" placeholder="Resultado equipo 2"
-    />
+    <input id="inputCal1" type="text" value="" name="input1" placeholder="Resultado equipo 1" />
+    <input id="inputCal2" type="text" value="" name="input1" placeholder="Resultado equipo 2" />
 
     <button id="btn-submit" type="submit" name="btn-submit" onclick="resultadoPartido()">
         Calcular
@@ -29,5 +32,22 @@
 
     <div id="blank"></div>
 
-</body> 
+    <div class="form">
+        <form id="form__database">
+            <label for="fullname"> Escribe tu nombre completo:
+                <input type="text" name="fullname" placeholder="fullname" id="inputForm"/>
+            </label>
+            <label for="number">Escribe tu numero de telefono:
+                <input type="number" name="number" id="" placeholder="phone number please" id="inputForm"/>
+            </label>
+            <label for="email">
+                <input type="email" name="email" id="" placeholder="your email" id="inputForm"/>
+            </label>
+
+            <button type="submit" id="btn-submit-form">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
 </html>
