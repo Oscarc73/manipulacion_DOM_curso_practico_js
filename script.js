@@ -28,15 +28,15 @@ console.log({
     input2
 });
 //resultado partido
-function resultadoPartido () {
+function resultadoPartido() {
     let resultEquipo1 = parseInt(input1.value);
     let resultEquipo2 = parseInt(input2.value);
 
     if (resultEquipo1 == resultEquipo2) {
         pResult.innerText = `Es un Empate`
-    } else if (resultEquipo1 > resultEquipo2){
+    } else if (resultEquipo1 > resultEquipo2) {
         pResult.innerText = `El ganador es el equipo 1 con ${resultEquipo1} puntos`
-    } else if (resultEquipo1 < resultEquipo2){
+    } else if (resultEquipo1 < resultEquipo2) {
         pResult.innerText = `El ganador es el equipo 2 con ${resultEquipo2} puntos`
     } else {
         pResult.innerText = `Escribe cual va a ser el resultado para ambos equipos por favor`
@@ -59,13 +59,11 @@ console.log({
 
 form.addEventListener('submit', printFormulario)
 
-function printFormulario (event) {
+function printFormulario(event) {
     event.preventDefault();
     let name = inputName.value;
     let number = parseInt(inputNumber.value);
     let mail = inputEmail.value;
-
-    console.log(number);
 
     pPrintForm.innerHTML = `
     Verifica la informacion:
