@@ -8,21 +8,13 @@ const pResult = document.querySelector('#result');
 const dblank = document.getElementById('blank'); // con getElementById no es necesario discriminar si es una clase . o un id #
 const imageDivBlank = document.createElement('img');
 const form = document.querySelector("#form__database");
-const inputForm = document.querySelector("#inputForm");
 const inputName = document.querySelector('#inputForm1');
-const inputNumber = document.querySelector('#inputForm2');
+const inputNumber = document.getElementById('inputForm2');
 const inputEmail = document.querySelector('#inputForm3');
 const pPrintForm = document.querySelector('.printForm');
 
 
-imageDivBlank.style.cssText = 'width: 300px; margin-top: 20px;';//manipulando css en JS
-
-console.log({
-    allH1,
-    parrafo2,
-    idparrafo3,
-    input2
-});
+imageDivBlank.style.cssText = 'width: 300px; margin: 20px 0px;';//manipulando css en JS
 
 console.log(idparrafo3.getAttribute('id'));
 
@@ -55,25 +47,31 @@ dblank.classList.add('parrafoblank')
 
 imageDivBlank.setAttribute('src', './images/american_football.png')
 
-console.log(imageDivBlank);
-
 dblank.append(imageDivBlank);
 
 //events form
+
+console.log({
+    inputName,
+    inputNumber,
+    inputEmail
+});
 
 form.addEventListener('submit', printFormulario)
 
 function printFormulario (event) {
     event.preventDefault();
     let name = inputName.value;
-    let number = +inputNumber.value;
+    let number = parseInt(inputNumber.value);
     let mail = inputEmail.value;
 
-    pPrintForm.innerHTML = `ya casi`/* `
+    console.log(number);
+
+    pPrintForm.innerHTML = `
     Verifica la informacion:
-    Nombre completo: ${name}
-    Numero de telerono: ${number}
-    Correo electronico: ${mail}
-    `; */
+    -Nombre completo: ${name} 
+    -Numero de telerono: ${number} 
+    -Correo electronico: ${mail} 
+    `;
 }
 
